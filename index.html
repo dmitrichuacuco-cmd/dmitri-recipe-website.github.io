@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- for @media -->
+<html>
+	<head>
+		<title>Recipe website</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class = "search-bar">
+					<input class="" placeholder="Search Recipes" name="q">
+					<button class="submit"> <img src="images/search.png"></button>
+				</div>
+				<div class = "login">
+					<button class="entry">Sign up</button>
+					<button class="entry">Login</button>
+				</div>
+			</div>
+
+			<div class="body">
+				<div class="navbar">
+        			<li><a style=""<b href="#All" onclick="highlightButton('All')" class="animate">All</b></a></li>
+        			<li><a style=""<b href="#Breakfast" onclick="highlightButton('Breakfast')" class="animate">Breakfast</b></a></li>
+        			<li><a style=""<b href="#Lunch" onclick="highlightButton('Lunch')" class="animate">Lunch</b></a></li>
+        			<li><a style=""<b href="#Dinner" onclick="highlightButton('Dinner')" class="animate">Dinner</b></a></li>
+        			<li><a style=""<b href="#Drinks" onclick="highlightButton('Drinks')" class="animate">Drinks</b></a></li>
+				</div>
+
+				<!-- remove for now	
+				<div class = "dropdown">
+					<button onclick="myFunction()" class="dropbtn">Countries ▼</button>
+  					<div id="myDropdown" class="dropdown-content">
+    					<a href="#">Indian</a>
+    					<a href="#">Italian</a>
+    					<a href="#">Turkish</a>
+    					<a href="#">Greek</a>
+  					</div>
+				</div> 
+				-->
+
+			</div>
+
+
+			<div class="main">
+				<div class="foodboard">
+					<div class="food">
+						<img src="images/Biryani.jpg">
+						<h4>Biryani</h4>
+						<span class="category">Breakfast</span>
+						<button>View</button>
+					</div>
+					<div class="food">
+						<img src="images/Baklava.jpg">
+						<h4>Baklava</h4>
+						<span class="category">Dinner</span>
+						<button>View</button>
+					</div>
+					<div class="food">
+						<img src="images/Kebabs.jpg">
+						<h4>Kebabs</h4>
+						<span class="category">Lunch</span>
+						<button>View</button>
+					</div>
+					<div class="food">
+						<img src="images/Butter Chicken.jpg">
+						<h4>Butter Chicken</h4>
+						<span class="category">Dinner</span>
+						<button>View</button>
+					</div>
+					<div class="food">
+						<img src="images/Falafel.jpg">
+						<h4>Falafel</h4>
+						<span class="category">Breakfast</span>
+						<button>View</button>
+					</div>
+					<div class="food">
+						<img src="images/Souvlaki.jpg">
+						<h4>Souvlaki</h4>
+						<span class="category">Breakfast</span>
+						<button>View</button>
+					</div>
+					<div class="food">
+						<img src="images/Tzatziki.jpg">
+						<h4>Tzatziki</h4>
+						<span class="category">Breakfast</span>
+						<button>View</button>
+					</div>
+				
+				</div>
+
+				<script filterFoodItems()></script>
+
+				<div class="sidebar">
+					<div class="accounts">
+						<button class="users">
+							<div class = "most-followed">
+								<h3>Most followed</h3>
+							</div>
+							<div class="view-all">
+								<h3>View All</h3>
+							</div>
+						</button>
+						<button class="users">
+							<div class="profile-pic">
+								<img src="images/profile picture.png">
+							</div>
+							<div class="name">
+								<h3>Dmitri Chuacuco</h3>
+								<h4>Athens, Greece</h4>
+							</div>
+						</button>
+						<button class="users">
+							<div class="profile-pic">
+								<img src="images/profile picture.png">
+							</div>
+							<div class="name">
+								<h3>Monique Jericha Sy</h3>
+								<h4>Tokyo, Japan</h4>
+							</div>
+						</button>
+						<button class="users">
+							<div class="profile-pic">
+								<img src="images/profile picture.png">
+							</div>
+							<div class="name">
+								<h3>Aaron Carl Co</h3>
+								<h4>Dubai, United Arab Emirates</h4>
+							</div>
+						</button>
+						<button class="users">
+							<div class="profile-pic">
+								<img src="images/profile picture.png">
+							</div>
+							<div class="name">
+								<h3>Jason Philip Laohoo</h3>
+								<h4>New York, USA</h4>
+							</div>
+						</button>
+					</div>
+
+					<div class="view">
+						<button class="title"><h3>Id like to cook..</h3>View All</button>
+						<button class="genre">
+							<div class="Type">Vegetarian</div>
+						</button>
+						<button class="genre">
+							<div class="Type">Seafood</div>
+						</button>
+						<button class="genre">
+							<div class="Type">Meats</div>
+						</button>
+						<button class="genre">
+							<div class="Type">Dessert</div>
+						</button>
+						<button class="genre">
+							<div class="Type">Halal</div>
+						</button>
+					</div>
+
+
+					
+				</div>
+
+			</div> <!-- main end -->
+
+			<div class="links-and-contact">
+				<div class="contacts">
+					<div class="email-wrapper">
+						<label for = "email">
+						<h2>Ready to cook?</h3>
+						<h3>Sign up for our weekly newsletters!</h4>
+						<input type="email" id="email" placeholder="enter your email">
+						</label>
+					</div>
+					<div class = "submit-button-wrapper">
+						<input type="submit" valid="Send Message" id="submit-button"/> 
+					</div>
+				</div>
+
+				<div class = "links"> <!-- links -->
+					<h3>Let's be friends!</h3>
+					<div class = "links-list">
+						<button><a href="https://www.facebook.com/"><img src="images/facebook.png"></a></button> 
+						<button><a href="https://www.instagram.com/falafelyo/"><img src="images/instagram.png"></a></button>
+						<button><a href="https://https://twitter.com/"><img src="images/twitter.png"></a></button>
+						<button><a href="https://https://www.youtube.com/"><img src="images/youtube.png"></a></button>
+					</div>
+				</div>
+
+				<div class="about">
+					<div class="links-list-2">
+						<a href="https://www.simplyrecipes.com/">About Us</a>
+						<a href="https://www.simplyrecipes.com/">Terms of Service</a>
+						<a href="https://www.simplyrecipes.com/">Privacy Policy</a>
+						<a href="https://www.simplyrecipes.com/">Editorial Guidelines</a>
+						<a href="https://www.simplyrecipes.com/">Contact</a>
+						<a href="https://www.simplyrecipes.com/">Advertise</a>
+						<a href="https://www.simplyrecipes.com/">Careers</a>
+					</div>
+				</div>
+				
+			</div>
+
+			
+
+			
+
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
