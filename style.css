@@ -199,16 +199,17 @@ a:hover
   	padding-bottom: 20px;
 	}
 	.navbar {
-		width: auto;
-
+		width: 100%;
 	}
 	.navbar li {
-		padding-left: 5px;
-  	padding-right: 5px;
+
+		padding-left: 2px;
+  	padding-right: 2px;
 	}
 	.navbar li a {
+		width: 100%;
 		font-size: 10px;
-		padding: 3px 6px;
+		padding: 1px 1px;
 	}
 }
 
@@ -649,13 +650,13 @@ a:hover
 	}
 	.about {
 		padding: 10px 10px;
-		padding-left: 50px;
+		padding-left: 100px;
 		padding-right: 50px;
 		font-size: 14px;
 		text-align: center;
 	}
 	.links-list-2 {
-		grid-gap: 5px;
+		grid-gap: 10px;
 	}
 
 }
