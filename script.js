@@ -26,12 +26,18 @@ function highlightButton(id) {
   }
 
   // Add the 'active' class to the clicked link
-  var selectedLink = document.querySelector('a[href="#' + id + '"]');
+  var selectedLink;
+  if (id === 'All') {
+    selectedLink = document.querySelector('a[href="#All"]');
+  } else {
+    selectedLink = document.querySelector('a[href="#' + id + '"]');
+  }
   selectedLink.classList.add('active');
-
-  // Prevent the default behavior of the anchor tag
-  event.preventDefault();
 }
+
+// Call the highlightButton function with 'All' as the default id
+highlightButton('All');
+
 
 // Function to filter food items based on search query and category
 function filterFoodItems() {
@@ -64,3 +70,28 @@ document.querySelectorAll('.navbar a').forEach(function(navLink) {
 
 // Initial filtering when the page loads
 filterFoodItems();
+
+// Function to filter food items based on search query
+function searchFilterFoodItems() {
+    // Get the search query entered by the user
+    var searchQuery = document.querySelector('.search-bar input[name="q"]').value.toLowerCase();
+
+    // Get all food items in the foodboard
+    var foodItems = document.querySelectorAll('.foodboard .food');
+
+    // Iterate over each food item
+    foodItems.forEach(function(foodItem) {
+        // Get the text content of the food item
+        var foodName = foodItem.querySelector('h4').textContent.toLowerCase();
+
+        // Check if the search query matches the food name
+        if (foodName.includes(searchQuery) || searchQuery === '') {
+            foodItem.style.display = 'block'; // Show the food item if it matches the search query
+        } else {
+            foodItem.style.display = 'none'; // Hide the food item if it doesn't match the search query
+        }
+    });
+}
+
+// Event listener for the search input
+document.querySelector('.search-bar input[name="q"]').addEventListener('input', filterFoodItems);
