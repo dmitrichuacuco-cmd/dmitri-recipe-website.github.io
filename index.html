@@ -11,10 +11,16 @@
 				<div class = "search-bar">
 					<input class="" placeholder="Search Recipes" name="q">
 					<button class="submit"> <img src="images/search.png"></button>
+					<script searchFilterFoodItems()></script>
 				</div>
 				<div class = "login">
-					<button class="entry">Sign up</button>
-					<button class="entry">Login</button>
+					<a href="signUp.html">
+						<button class="entry">Sign up</button>
+					</a>	
+					<a href="login.html">
+						<button class="entry">Login</button>
+					</a>
+					
 				</div>
 			</div>
 
@@ -45,51 +51,88 @@
 			<div class="main">
 				<div class="foodboard">
 					<div class="food">
-						<img src="images/Biryani.jpg">
+						<a href="https://www.indianhealthyrecipes.com/chicken-biryani-recipe/">
+							<img src="images/Biryani.jpg">
+						</a>
 						<h4>Biryani</h4>
 						<span class="category">Breakfast</span>
-						<button>View</button>
+						<a href="https://www.indianhealthyrecipes.com/chicken-biryani-recipe/">
+						  <button>View</button>
+						</a>
+						
 					</div>
 					<div class="food">
-						<img src="images/Baklava.jpg">
+						<a href="https://www.themediterraneandish.com/how-to-make-baklava/">
+							<img src="images/Baklava.jpg">
+						</a>
 						<h4>Baklava</h4>
 						<span class="category">Dinner</span>
-						<button>View</button>
+						<a href="https://www.themediterraneandish.com/how-to-make-baklava/">
+						  <button>View</button>
+						</a>
 					</div>
 					<div class="food">
-						<img src="images/Kebabs.jpg">
+						<a href="https://www.onceuponachef.com/recipes/middle-eastern-chicken-kabobs.html">
+							<img src="images/Kebabs.jpg">
+						</a>	
 						<h4>Kebabs</h4>
 						<span class="category">Lunch</span>
-						<button>View</button>
+						<a href="https://www.onceuponachef.com/recipes/middle-eastern-chicken-kabobs.html">
+						  <button>View</button>
+						</a>
 					</div>
 					<div class="food">
-						<img src="images/Butter Chicken.jpg">
+						<a href="https://www.indianhealthyrecipes.com/butter-chicken/">
+						  <img src="images/Butter Chicken.jpg">
+						</a>
 						<h4>Butter Chicken</h4>
 						<span class="category">Dinner</span>
-						<button>View</button>
+						<a href="https://www.indianhealthyrecipes.com/butter-chicken/">
+						  <button>View</button>
+						</a>
 					</div>
 					<div class="food">
-						<img src="images/Falafel.jpg">
+						<a href="https://downshiftology.com/recipes/falafel/">
+						  <img src="images/Falafel.jpg">
+						</a>
 						<h4>Falafel</h4>
 						<span class="category">Breakfast</span>
-						<button>View</button>
+						<a href="https://downshiftology.com/recipes/falafel/">
+						  <button>View</button>
+						</a>
 					</div>
 					<div class="food">
-						<img src="images/Souvlaki.jpg">
+						<a href="https://www.mygreekdish.com/recipe/souvlaki-with-chicken-and-pita-breads/">
+							<img src="images/Souvlaki.jpg">
+						</a>
 						<h4>Souvlaki</h4>
 						<span class="category">Breakfast</span>
-						<button>View</button>
+						<a href="https://www.mygreekdish.com/recipe/souvlaki-with-chicken-and-pita-breads/">
+						  <button>View</button>
+						</a>
 					</div>
 					<div class="food">
-						<img src="images/Tzatziki.jpg">
+						<a href="https://www.loveandlemons.com/tzatziki-sauce/">
+						  <img src="images/Tzatziki.jpg">
+						</a>
 						<h4>Tzatziki</h4>
 						<span class="category">Breakfast</span>
-						<button>View</button>
+						<a href="https://www.loveandlemons.com/tzatziki-sauce/">
+						  <button>View</button>
+						</a>
 					</div>
+
+
 				
 				</div>
 
-				<script filterFoodItems()></script>
+				<script>
+				  // Call the initPopup function after the DOM has loaded
+				  document.addEventListener('DOMContentLoaded', function() {
+				    initPopup();
+				  });
+				</script>
+
 
 				<div class="sidebar">
 					<div class="accounts">
